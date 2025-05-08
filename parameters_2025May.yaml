@@ -1,0 +1,87 @@
+# parameters.yaml
+
+# File name for the obsservation dates
+fname_obsdate: obsdates_2025May.txt
+
+#fname_obsdate_finish: 2025-03/obsdates_2025Mar_finish.txt
+
+# File name for the targets
+fname_targets: target_table_output_202505.ecsv
+
+#fname_targets_finish: 2025-03/target_table_2025Mar_finish.txt
+
+# Output file name for report
+fname_report: obsplan_2025May.pdf
+
+# Fraction of the time slots for each working group
+frac:
+  GA: 0.20
+  GE: 0.40
+  CO: 0.40
+
+# Margin for the fraction of the time slots for each working group 
+frac_margin: 0.05
+
+# Whether GA fields should be observed last of the night
+GA_last: False
+
+# Number of the continuous time slots for each working group
+n_continuous:
+  GA: 4
+  GE: 8
+  CO: 4
+  dummy: 4
+
+# Width of the time slots (minutes)
+w_timeslot: 20
+
+# Length of the overhead time (minutes)
+t_overhead: 5
+
+# The altitude of the Sun to define the twilight (degrees)
+angle_twilight: -15
+
+# The limit of airmass
+airmass:
+  limit: 
+    CO: 1.6
+    GE: 1.5
+    GA: 2.0
+  warn : 1.6
+
+meridian:
+  limit: 0.1
+  warn : 0.3
+
+# The limit of the moon separation (degrees)
+moonsep:
+  limit: 60
+  warn : 75
+
+# The limit of the planets separation (degrees)
+planetssep:
+  limit: 10
+  warn : 20
+
+# The limit of the moon illumination
+moonill:
+  limit: 0.15
+  warn:  0.30
+
+# The limit of the moon altitude (degrees)
+moonalt: 
+  limit:  0
+  warn : 30
+
+# Weight for observation completion
+weight_comp: 0.01
+
+# Weight for priority
+weight_pri: 0.3
+
+# Slew speed (degrees/second)
+slew_speed_az: 0.5
+slew_speed_el: 0.5
+
+# Instrument rotation speed (degrees/second)
+inst_rot_speed: 1.5
